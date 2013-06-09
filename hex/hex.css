@@ -1,0 +1,40 @@
+.hex,
+.hex:before,
+.hex:after {
+  position: absolute;
+}
+.hex:before,
+.hex:after {
+  content: '';
+  top: 0;
+  left: 0;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+}
+.hex {
+  overflow: visible;
+  width: 100px;
+  height: 100px;
+  transform: matrix(0.5, -0.25, 0, 0.5, -25, -37.5);
+  -ms-transform: matrix(0.5, -0.25, 0, 0.5, -25, -37.5);
+  -webkit-transform: matrix(0.5, -0.25, 0, 0.5, -25, -37.5);
+  position: absolute;
+}
+.hex:before {
+  transform: matrix(-1, -1, 1, 0, -50, -100);
+  -ms-transform: matrix(-1, -1, 1, 0, -50, -100);
+  -webkit-transform: matrix(-1, -1, 1, 0, -50, -100);
+}
+.hex:after {
+  transform: matrix(0, 1, -1, -1, -100, -50);
+  -ms-transform: matrix(0, 1, -1, -1, -100, -50);
+  -webkit-transform: matrix(0, 1, -1, -1, -100, -50);
+}
+.hex-container {
+  position: relative;
+  overflow: hidden;
+  transform: scaleX(0.866);
+  -ms-transform: scaleX(0.866);
+  -webkit-transform: scaleX(0.866);
+}

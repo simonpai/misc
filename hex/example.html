@@ -1,6 +1,8 @@
 <html>
 <head>
 	<title>HEX</title>
+	<link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet">
+	<link href="http://netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.min.css" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="hex.css">
 </head>
 <body>
@@ -8,30 +10,52 @@
 		.hex,
 		.hex:before,
 		.hex:after {
-			border-right: 2px solid #666;
-			border-bottom: 2px solid #666;
+			border-right: 4px solid #999;
+			border-bottom: 4px solid #999;
 		}
 		.hex:hover,
 		.hex:hover:before,
 		.hex:hover:after {
-			background: #CCF;
+			background: #EEF;
+			border-color: #33C;
+			color: #33C;
 		}
 		#board {
 			width: 460px;
 			height: 400px;
 			border: 1px solid #333;
 		}
+		.hex > i {
+			font-size: 72px;
+		}
+		.hex > span {
+			font-size: 48px;
+		}
 	</style>
 	<div id="board" class="hex-container">
-		<div class="hex" style="top: 125px; left: 180px;"></div>
-		<div class="hex" style="top: 125px; left: 280px;"></div>
+		<div class="hex" style="top: 125px; left: 180px;">
+			<i class="icon-bug"></i>
+		</div>
+		<div class="hex" style="top: 125px; left: 280px;">
+			<span>Boss</span>
+		</div>
 		
-		<div class="hex" style="top: 200px; left: 130px;"></div>
-		<div class="hex" style="top: 200px; left: 230px;"></div>
-		<div class="hex" style="top: 200px; left: 330px;"></div>
+		<div class="hex" style="top: 200px; left: 130px;">
+			<i class="icon-building"></i>
+		</div>
+		<div class="hex" style="top: 200px; left: 230px;">
+			<i class="icon-user"></i>
+		</div>
+		<div class="hex" style="top: 200px; left: 330px;">
+			<i class="icon-exclamation"></i>
+		</div>
 		
-		<div class="hex" style="top: 275px; left: 180px;"></div>
-		<div class="hex" style="top: 275px; left: 280px;"></div>
+		<div class="hex" style="top: 275px; left: 180px;">
+			<i class="icon-medkit"></i>
+		</div>
+		<div class="hex" style="top: 275px; left: 280px;">
+			<i class="icon-home"></i>
+		</div>
 	</div>
 </body>
 </html>

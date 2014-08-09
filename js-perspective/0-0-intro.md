@@ -24,6 +24,7 @@ Browser 君的工作 (大致上)
 ###推薦工具
 * Chrome 或 Firefox
 * 一個好的文字編輯器 (sublime text)
+* https://jstutor.herokuapp.com/ (VM 君工作視覺化)
 
 ###推薦課程
 * http://www.codecademy.com/en/tracks/javascript

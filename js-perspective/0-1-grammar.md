@@ -20,7 +20,7 @@ function f(x, y) { // f, x, y 是變數名稱
 }
 ```
 
-Literal (不會翻)
+直接表達式 (Literal) (中文是我勉強翻的)
 * 表達固定真假值、數字、字串的單位。
 * `true`, `false`, `0`, `1`, `"hello"`...
 * `null`

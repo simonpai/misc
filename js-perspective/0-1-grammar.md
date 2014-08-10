@@ -37,6 +37,7 @@ var b = { name: "Bob", age: 14 }; // object literal
 
 關鍵字 (keyword)
 * 在 JS 裡有特殊的意義，不可以拿來當變數名稱。
+* 如同人類語言中的文法字。
 * 最常見的有 `var`, `this`, `if`, `for`, `function`, `return`, `new` 等等。
 * [列表](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Lexical_grammar#Keywords)
 * 有些字在現在的 JS 版本裡沒有用到，但是怕以後會用，所以先保留起來，稱為保留字 (reserved word)。

@@ -1,4 +1,4 @@
-##運算子 (operator)
+##運算子 (Operator)
 
 * 程式語言中的加減乘除符號。
 * 一樣要按照文法分解成語法樹來解讀。
@@ -14,7 +14,7 @@ x - y
 x * y // 乘
 x / y // 除
 
-x % y // Modulus (取餘數) 俗種 mod
+x % y // Modulus (取餘數) 俗稱 mod
 -x    // 負號 (單元)
 ```
 
@@ -102,7 +102,7 @@ var y = x && x.name;
 // 如果 x 是 null，y 也是 null，因為右邊不執行，不會發生 NPE
 ```
 
-###二進位運算
+###二進位 (Bitwise)
 
 ```js
 x & y

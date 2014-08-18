@@ -1,4 +1,4 @@
-##流程控制 (control flow)
+##流程控制 (Control Flow)
 
 * JS 中的流程控制都是句型，沒有表達式。
 

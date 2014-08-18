@@ -45,6 +45,9 @@ if (exp)
 	console.log("abc");
 else
 	console.log("def");
+
+// 有些人會寫成這樣，但缺點是在 debug 的時候會不容易分辨有沒有執行到
+if (exp) console.log("abc");
 ```
 
 ###Switch / Case
@@ -71,34 +74,90 @@ switch (exp) {
 
 ###While 迴圈
 
+* `while` 的括號內是表達式。
+* 表達式判定為 `true` 則執行後面的內容，並且重覆此步驟，直到判定為 `false` 或強制跳脫。
+* 使用 `break` 強制跳脫迴圈。
+* 使用 `continue` 強制跳入下一個循環。
+
 ```js
+var i = 0;
+while (i < 10) { // 從 0 印到 9
+	console.log(i);
+	i++;
+}
+
+var j = 0;
+whlie (true) { // 也是從 0 印到 9
+	console.log(j);
+	j++;
+	if (j > 9)
+		break;
+}
+
+var k = 0;
+while (k < 10) { // 跳過了奇數，所以是印出 0, 2, 4, 6, 8
+	if (k % 2 != 0)
+		continue;
+	console.log(k);
+	k++;
+}
+```
+
+###For 迴圈
+
+* `while` 的強化版，最常見的迴圈類型。
+* `for` 的括號裡放的三個表達式 (*) 依序是：
+	* 一開始執行的動作 (`var` 的狀況不算真的表達式)
+	* 進入迴圈的判定式
+	* 迴圈尾巴的動作
+* `break` 與 `continue` 也適用。
+
+```js
+// 最常見的 for 迴圈類型
+for (var i = 0; i < 10; i++) {
+	console.log(i);
+}
+// 相當於
 var i = 0;
 while (i < 10) {
 	console.log(i);
 	i++;
 }
-```
 
-// break, continue
-
-###For 迴圈
-
-* `break` 與 `continue` 也適用。
-
-```js
-for (var i = 0; i < 10; i++) {
-	console.log(i);
+// 第一段不一定是 var statement
+var j;
+for (j = 0; j < 10; j++) {
+	// ...
 }
+
+// 第一段可以宣告多個變數
+// 表達式可以利用逗號運算子串接多個表達式
+for (var k = 0, len = 10; k < len; k++, len--) {
+	// ...
+}
+
+// 也可以留白不寫
+for (; m < 10;) {
+	// ...
+}
+// 相當於
+while (m < 10) {
+	// ...
+}
+
+// 迴圈內容也可以是 empty statement
+for (var n = 0; n < 10; console.log(n++));
 ```
 
 ### Do 迴圈
 
 * 很少見。
-* 因為判定在第一次執行後面，比較少有這種需要。
+* 判定在第一次執行後面，比較少有這種需要。
 * 並且條定式寫在尾巴，對人類讀起來比較不友善。
 * `break` 與 `continue` 也適用。
 
 ```js
+// 這樣是印出 0 到 10
 var i = 0;
 do {
 	console.log(i);

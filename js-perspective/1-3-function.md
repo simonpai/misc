@@ -1,5 +1,11 @@
 ##函數 (Function)
 
+* 定義函數的行為稱為宣告。
+* 使用函數的行為稱為呼叫。
+* 宣告的時候並不會執行函數，呼叫的時候才會。
+* 宣告的時候定義被傳入的變數叫參數 (parameter)。
+* 呼叫的時候傳入的實際值叫參數 (argument)。 XD
+
 ```js
 function squareSum(x, y) {
 	return x * x + y * y;
@@ -50,7 +56,7 @@ execute(function () {
 * 函數宣告的時候可以定義零到任意多個參數。
 * 多傳入的參數沒有差別，少傳入的參數視為 `undefined`。
 * 參數可以是任何類別，包括函數本身。
-* 使用 `arguments` 可以找到所有傳入的參數，適用於不定數量參數的情況。
+* 使用 `arguments` 可以找到所有傳入的參數值，適用於不定數量參數的情況。
 
 ```js
 function render(x, y) {
@@ -99,19 +105,6 @@ function g(x, y) {
 		return 0;
 	return x * x + y * y;
 }
-```
-
-###呼叫 (Call)
-
-* 使用一個函數的行為稱為呼叫。
-
-```js
-function render(x, y) {
-	// ...
-}
-render(0, 1);
-
-// TODO: return value
 ```
 
 ###Scope

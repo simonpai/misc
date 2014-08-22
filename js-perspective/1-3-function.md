@@ -112,6 +112,7 @@ function g(x, y) {
 * 函數的參數與函數內宣告的變數，外面是看不到的。
 * 如果內外使用了名字相同的變數，以內層優先。
 * 在 JS 裡只有 function 會形成 scope，其他 block (如 `if`、`for` 等) 都不會。
+* 為了區隔並保護變數，也可以利用 IIFE 刻意製造 scope。
 
 ```js
 var x = 0,
@@ -146,6 +147,10 @@ function f() {
 ```
 
 ###遞迴 (Recursion)
+
+* 在函數中直接或間接呼叫自己的行為稱為遞迴 (Recursion)。
+* "To iterate is human, to recurse, divine" 
+	* 「遞迴只應天上有，凡人該當用迴圈。」
 
 ```js
 // TODO

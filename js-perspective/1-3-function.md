@@ -82,8 +82,23 @@ callThreeTimes("Hello!", alert);
 
 ###回傳值
 
+* `return` 後面的表達式結果會回傳給函數的呼叫者。
+* `return` 後面如果沒有東西，或者到最後一行都沒有 `return`，視同回傳 `undefined`。
+* `return` 之後的 statement 都不會執行。
+
 ```js
-// TODO
+function f(x, y) {
+	return x * y;
+}
+var z = f(7, 8);
+var w = f(7, 8) + f(3, 4);
+console.log(f(2, 3));
+
+function g(x, y) {
+	if (x < 0 || y < 0)
+		return 0;
+	return x * x + y * y;
+}
 ```
 
 ###呼叫 (Call)

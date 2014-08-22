@@ -5,6 +5,15 @@ function squareSum(x, y) {
 	return x * x + y * y;
 }
 var z = squareSum(x, y);
+
+// 函數內再呼叫別的函數
+function square(x) {
+	return x * x;
+}
+function squareSum(x, y) {
+	return square(x) + square(y);
+}
+var z = squareSum(x, y);
 ```
 
 ###函數宣告
@@ -38,10 +47,37 @@ execute(function () {
 
 ###參數 (Parameter)
 
-* 函數宣告的時候可以定義零到任意多個參數
+* 函數宣告的時候可以定義零到任意多個參數。
+* 多傳入的參數沒有差別，少傳入的參數視為 `undefined`。
+* 參數可以是任何類別，包括函數本身。
+* 使用 `arguments` 可以找到所有傳入的參數，適用於不定數量參數的情況。
 
 ```js
-// TODO
+function render(x, y) {
+	console.log(y);
+}
+render(1, 2); // 印出 2
+render(1, 2, 3); // 還是印出 2
+render(1); // 印出 undefined
+
+// 參數也可以是函數
+function callThreeTimes(data, f) {
+	f(data);
+	f(data);
+	f(data);
+}
+function f1(x) {
+	alert(x);
+}
+callThreeTimes("Hello!", f1);
+// 或者直接傳入一個函數表達式
+callThreeTimes("Hello!", function (x) {
+	alert(x);
+});
+// alert 也是一個函數
+callThreeTimes("Hello!", alert);
+
+// TODO: arguments
 ```
 
 ###回傳值
@@ -68,8 +104,6 @@ render(0, 1);
 ```js
 // TODO
 ```
-
-###`arguments`
 
 ###邪惡的 Eval
 

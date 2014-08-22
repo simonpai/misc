@@ -109,8 +109,34 @@ function g(x, y) {
 
 ###Scope
 
+* 函數的參數與函數內宣告的變數，外面是看不到的。
+* 如果內外使用了名字相同的變數，以內層優先。
+* 在 JS 裡只有 function 會形成 scope，其他 block (如 `if`、`for` 等) 都不會。
+
 ```js
-// TODO
+var x = 0,
+	y = 1,
+	z = 2;
+function render(x) {
+	var y = 6;
+	console.log([x, y, z]); // 5, 6, 2
+}
+render(5);
+
+
+
+// scope 常常會出現很多層
+function f() {
+	
+	function g() {
+		
+		setTimeout(function () {
+			
+		});
+		
+	}
+	
+}
 ```
 
 ###邪惡的 Eval
@@ -120,6 +146,10 @@ function g(x, y) {
 ```
 
 ###遞迴 (Recursion)
+
+```js
+// TODO
+```
 
 
 
